@@ -11,28 +11,253 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
     <link rel="stylesheet" href="Styles/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="Scripts/scripts.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </head>
 
   <body>
     <!-------------------------------- NAV -------------------------------->
-    <nav>
-      <div>
-        <input type="checkbox" id="menu-hamburguesa" />
-        <label for="menu-hamburguesa">
-          <img src="Assets/Íconos/menu 1.svg" alt="" />
-        </label>
-        <ul id="topics">
-          <li>Home</li>
-          <li>Servicios</li>
-          <li>Acerca de mí</li>
-          <li>Mis habilidades</li>
-          <li>Mi Portafolio</li>
-          <li>Contacto</li>
-        </ul>
+    <nav id="navbar">
+      <div class="topnav" id="myTopnav">
+        <a href="#contact">Contacto</a>
+        <a href="#portfolio">Mi portafolio</a>
+        <a href="#skills">Mis habilidades</a>
+        <a href="#about">Acerca de mí</a>
+        <a href="#services">Servicios</a>
+        <a href="#home" class="active">Home</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
     </nav>
     <!-------------------------------- MAIN -------------------------------->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div>
+          <img id="abt-img" src="Assets/Vectores/Group 85.svg" alt="" />
+        </div>
+        <div id="description">
+          <h2>Hola soy Diego</h2>
+          <h1>UX/UI Designer</h1>
+          <div id="wrapper-socials">
+            <button id="socials">
+              <img src="Assets/Íconos/cib_linkedin-in.svg" alt="" />
+            </button>
+            <button id="socials">
+              <img src="Assets/Íconos/ant-design_instagram-filled.svg" alt="" />
+            </button>
+            <button id="socials">
+              <img src="Assets/Íconos/ant-design_twitter-outlined.svg" alt="" />
+            </button>
+          </div>
+          <div id="line-break">
+            <hr />
+          </div>
+          <button id="contactame">
+            <div>
+              <img id="con-img" src="Assets/Íconos/mail 3.svg" alt="" />
+            </div>
+            Contáctame
+          </button>
+        </div>
+      </section>
+      <!-- Services -->
+      <section id="services">
+        <div id="services-title">
+          <h2>SERVICIOS</h2>
+          <div id="wrapper-button">
+            <button class="button-svcs button-svcs-left">
+              <img src="Assets/Íconos/arrow-left 1.svg" alt="" />
+            </button>
+            <button class="button-svcs button-svcs-right">
+              <img src="Assets/Íconos/arrow-right 1.svg" alt="" />
+            </button>
+          </div>
+        </div>
+        <div
+          class="carousel"
+          data-flickity='{ "adaptiveHeight": true, "pageDots": false, "groupCells": 2 }'
+        >
+          <div class="carousel-cell">
+            <img src="Assets/Íconos/iconoir_design-pencil.svg" alt="" />
+            <h3 class="card-title">
+              UX/UI<br />
+              Design
+            </h3>
+            <div class="card-svcs-des">
+              Desde diseño hasta <br />
+              implementación del desarrollo
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <img src="Assets/Íconos/feather_search.svg" alt="" />
+            <h3 class="card-title">Research</h3>
+            <div class="card-svcs-des">
+              Desde diseño hasta <br />
+              implementación del desarrollo
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <img src="Assets/Íconos/majesticons_speakerphone-line.svg" alt="" />
+            <h3 class="card-title">Marketing</h3>
+            <div class="card-svcs-des">
+              Desde diseño hasta <br />
+              implementación del desarrollo
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <img src="Assets/Íconos/ic_outline-web-asset.svg" alt="" />
+            <h3 class="card-title">Web Design</h3>
+            <div class="card-svcs-des">
+              Desde diseño hasta <br />
+              implementación del desarrollo
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about">
+        <h2>ACERCA<br />DE MÍ</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras augue
+          neque, sagittis quis dolor ut, varius lacinia ante. Curabitur accumsan
+          risus quis iaculis laoreet. Nulla quis felis maximus, feugiat nisi a,
+          pulvinar ex. Sed arcu ex, dapibus sed porttitor in, dapibus in mi.
+          Fusce volutpat lacinia odio non malesuada.
+        </p>
+        <div class="wrapper-abt-img">
+          <div>
+            <img
+              class="abt-img"
+              src="Assets/Logos-Imágenes/image 9.png"
+              alt=""
+            />
+            UVM <br />2010-2014
+          </div>
+          <div>
+            <img
+              class="abt-img"
+              src="Assets/Logos-Imágenes/logo_academlo 5.png"
+              alt=""
+            />
+            Academlo <br />
+            2020-2021
+          </div>
+        </div>
+      </section>
+      <!-- Skills -->
+      <section id="skills">
+        <h2>MIS <br />HABILIDADES</h2>
+        <div class="card-skills">
+          <div class="percentage-wrapper">
+            <div class="percentage-bar"></div>
+            <div class="percentage"><h3>95%</h3></div>
+          </div>
+          <h3 class="title-skills">Mobile App Design</h3>
+        </div>
+        <div class="card-skills">
+          <div class="percentage-wrapper">
+            <div class="percentage-bar"></div>
+            <div class="percentage"><h3>95%</h3></div>
+          </div>
+          <h3 class="title-skills">Web design</h3>
+        </div>
+        <div class="card-skills">
+          <div class="percentage-wrapper">
+            <div class="percentage-bar"></div>
+            <div class="percentage"><h3>90%</h3></div>
+          </div>
+          <h3 class="title-skills">Design systems</h3>
+        </div>
+        <div class="card-skills">
+          <div class="percentage-wrapper">
+            <div class="percentage-bar"></div>
+            <div class="percentage"><h3>90%</h3></div>
+          </div>
+          <h3 class="title-skills">HTML, CSS, JavaScript</h3>
+        </div>
+      </section>
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <h2>
+          MI <br />
+          PORTAFOLIO
+        </h2>
+        <div
+          class="carousel"
+          data-flickity='{"groupCells":false, "pageDots":false, "prevNextButtons": false }'
+        >
+          <div class="carousel-cell carousel-cell--height1">
+            <div class="ptf-wrapper">
+              <img src="Assets/Logos-Imágenes/image 9-1.png" alt="" />Beauty App
+            </div>
+          </div>
+          <div class="carousel-cell carousel-cell--height2">
+            <div class="ptf-wrapper">
+              <img src="Assets/Logos-Imágenes/image 10.png" alt="" />Training
+              App
+            </div>
+          </div>
+          <div class="carousel-cell carousel-cell--height3">
+            <div class="ptf-wrapper">
+              <img src="Assets/Logos-Imágenes/image 11.png" alt="" />Mobile Apps
+            </div>
+          </div>
+          <div class="carousel-cell carousel-cell--height4">
+            <div class="ptf-wrapper">
+              <img
+                src="Assets/Logos-Imágenes/Rectangle 58.png"
+                alt=""
+              />Management
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+        <h2>CONTACTO</h2>
+        <div class="wrapper-con-img">
+          <div class="con-card">
+            <h3>Número <br />celular</h3>
+            <img
+              src="Assets/Íconos/phone contact.svg"
+              alt=""
+              class="con-mobile"
+            /><img
+              src="Assets/Íconos/phone contact desktop.svg"
+              alt=""
+              class="con-desktop"
+            />
+            <div class="con-card-text">(123) 456 7890</div>
+          </div>
+          <div class="con-card">
+            <h3>Email</h3>
+            <img
+              src="Assets/Íconos/mail contact.svg"
+              alt=""
+              class="con-mobile"
+            /><img
+              src="Assets/Íconos/mail contact desktop.svg"
+              alt=""
+              class="con-desktop"
+            />
+            <div class="con-card-text">name@workdomain.com</div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-------------------------------- FOOTER -------------------------------->
+    <footer id="footer">Hecho con &hearts; en Academlo</footer>
   </body>
 </html>
