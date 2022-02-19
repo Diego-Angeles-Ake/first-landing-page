@@ -48,11 +48,18 @@ img {
   h3 {
     font-size: 1.8rem;
   }
+
+  #description > h2 {
+    font-size: 1.5rem;
+  }
+
+  #description > h1 {
+    font-size: 3rem;
+  }
 }
 
 /* -------------------------------- NAV -------------------------------- */
 
-/* Add a black background color to the top navigation */
 .topnav {
   background-color: var(--blanco);
   overflow: hidden;
@@ -62,7 +69,6 @@ img {
   color: var(--azul);
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: right;
   display: block;
@@ -73,24 +79,20 @@ img {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   background-color: transparent;
   color: black;
 }
 
-/* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: transparent;
   color: var(--azul);
 }
 
-/* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   #myTopnav {
     display: flex;
@@ -124,7 +126,6 @@ img {
   z-index: 10;
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
   .topnav a {
     float: left;
@@ -220,15 +221,10 @@ img {
 /* ---------------------------- SERVICES ---------------------------- */
 
 #services {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto; */
   margin: 5vmin 3vmin;
 }
 
 #services-title {
-  /* grid-row: 1;
-  grid-column: 1 / span 2; */
   display: flex;
 }
 
@@ -291,14 +287,22 @@ img {
   margin: 0 3vmin;
   color: var(--gris);
   text-align: justify;
+  overflow: hidden;
 }
 
 #about > h2 {
   margin-bottom: 2vmin;
 }
 
+.deco {
+  display: block;
+  position: absolute;
+  left: 76%;
+  min-width: 42vmin;
+}
+
 #about > p {
-  width: 75%;
+  margin-bottom: 2vmin;
 }
 
 .wrapper-abt-img {
@@ -323,9 +327,10 @@ img {
   margin: 5vmin 3vmin;
 }
 
-#skills >h2{
+#skills > h2 {
   margin-bottom: 3vmin;
 }
+
 .percentage-wrapper {
   display: flex;
   flex-direction: column;
@@ -334,7 +339,6 @@ img {
   width: 30vmin;
   margin-bottom: 4vmin;
   box-shadow: 1vmin 1vmin 1vmin 1vmin var(--gris-claro);
-
 }
 
 .percentage {
@@ -357,7 +361,7 @@ img {
   align-items: center;
 }
 
-.title-skills{
+.title-skills {
   margin-left: 15vmin;
 }
 /* ---------------------------- PORTFOLIO ---------------------------- */
@@ -482,7 +486,7 @@ img {
   }
   /* ---------------------------- ABOUT ---------------------------- */
   #about > p {
-    width: 50%;
+    width: 85%;
   }
   /* ---------------------------- SKILLS ---------------------------- */
   .percentage-bar {
